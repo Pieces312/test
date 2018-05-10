@@ -1,0 +1,110 @@
+.border(@px) {
+  border-radius: @px;
+}
+
+.ant-row {
+  .ant-col-6 {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    height: 120px;
+
+    .gutter-box {
+      padding: 30px 40px;
+      height: 100%;
+      background-color: #fff;
+      box-sizing: border-box;
+      .border(3px);
+      color: #fff;
+
+      //right icon
+      .icon {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+
+      // infos left
+      .infos {
+        h2, p {
+          margin: 0;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        h2 {
+          font: 25px/35px "微软雅黑";
+          color: #fff;
+        }
+      }
+
+    }
+
+  }
+
+  .ant-col-8 {
+    padding: 0 15px;
+
+    .gutter-box {
+      background-color: #fff;
+      .border(3px);
+
+      .card-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+
+        .ant-avatar-image {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+        }
+      }
+
+      .card-content {
+        padding-top: 20px;
+
+        ul, li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        li {
+          font: 15px/38px "微软雅黑";
+
+          a {
+            float: left;
+            width: 20%;
+            color: #999;
+          }
+          .lineBar {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 20px;
+            padding: 0 10px;
+          }
+
+          .lineBar:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background-color: #0476a1;
+            border-radius: 20px 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+}

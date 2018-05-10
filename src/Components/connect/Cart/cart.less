@@ -1,0 +1,146 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cart {
+  margin-left: 100px;
+  padding: 50px 0;
+  position: relative;
+  width: 345px;
+  height: 550px;
+  background-color: #fff;
+  overflow: hidden;
+
+  .header, .footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #636663;
+    color: #fff;
+    font: 15px/50px "微软雅黑";
+    text-align: center;
+  }
+  .header {
+    top: 0;
+  }
+  .footer {
+    bottom: 0;
+
+    .total {
+      position: relative;
+      top: -8px;
+      left: -10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0000;
+      color: #fff;
+      font: 14px/20px "微软雅黑";
+      border-radius: 50%;
+    }
+  }
+
+  .main {
+    position: relative;
+    height: 100%;
+
+    .menuList {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      height: 100%;
+      background-color: #cdccc7;
+
+      li {
+        height: 40px;
+        font: 14px/40px "微软雅黑";
+        text-align: center;
+        border-bottom: 1px solid #999;
+      }
+      li.active {
+        background: #fff;
+      }
+    }
+
+    .mainDetail {
+      position: absolute;
+      right: 0;
+      width: 75%;
+      height: 100%;
+      overflow-y: auto;
+
+      .mainContainer {
+        position: absolute;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #d9dada;
+      }
+
+      &::-webkit-scrollbar-thumb  {
+        background-color: #07a0aa;
+        border-radius: 20px;
+      }
+
+      .itemsDetail {
+        min-height: 300px;
+
+        .goodsItem {
+          margin-top: 10px;
+          width: 100%;
+          border-bottom: 1px solid #ddd;
+
+          .pic, .pic img {
+            width: 100%;
+            height: 180px;
+          }
+
+          .gdsInfo {
+            padding: 0 15px;
+
+            .gdsName {
+              margin: 0;
+              font: 600 15px/25px '微软雅黑';
+
+              span {
+                padding-left: 20px;
+                font-weight: 400;
+                font-size: 13px;
+              }
+            }
+
+            .gdsNumber {
+              text-align: right;
+
+              span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: #0795c9;
+                color: #fff;
+                font: bold 13px/20px '微软雅黑';
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+              }
+
+              input {
+                padding-left: 10px;
+                width: 40px;
+                height: 20px;
+                text-align: center;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

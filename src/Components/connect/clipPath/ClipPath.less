@@ -1,0 +1,55 @@
+.clip-path {
+  .sub-title {
+    font: bold 15px/30px "微软雅黑";
+  }
+  .sub-content {
+    text-indent: 20px;
+
+    .notes {
+      margin: 8px 0;
+      font-weight: 500
+    }
+
+    .examples-item {
+      margin-bottom: 15px;
+      text-align: center;
+
+      img {
+        width: 390px;
+        height: 220px;
+      }
+      // triangle content
+      img.triangle {
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+      }
+      // circle content
+      img.circle {
+        clip-path: ellipse(100% 25% at 50% 45%);
+      }
+      // polygon content
+      img.polygon {
+        clip-path: polygon(20% 20%, 80% 20%, 100% 80%, 0 80%);
+      }
+      // dialog content
+      img.dialog {
+        clip-path: polygon(0% 0%,100% 0%,100% 80%,73% 80%,75% 100%,55% 80%,0% 80%);
+        transition: all 2s;
+
+        &:hover {
+          transform:rotate(360deg);
+          -webkit-clip-path: polygon(50% 0%, 65% 33%, 100% 33%, 80% 60%, 90% 100%, 50% 75%, 10% 100%,20% 60%,0 33%,35% 33%);
+        }
+      }
+      // star content
+      img.star {
+        width: 220px;
+        height: 220px;
+        clip-path: polygon(50% 0, 60% 40%, 100% 40%, 68% 65%, 75% 100%, 50% 75%, 25% 100%, 32% 65%, 0 40%, 40% 40%);
+      }
+      // leaf content
+      img.leaf {
+        clip-path: inset(10% 10% 10% 10% round 0 70% 0 70%);
+      }
+    }
+  }
+}
